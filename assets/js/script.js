@@ -61,6 +61,16 @@ $(function () {
       autoplaySpeed: (1500),
    });
 
+   // Abot Page Our Team Slick Initialize
+   $('.pfSlider_container').slick({
+      prevArrow: $('.blogteam_icon_prev'),
+      nextArrow: $('.blogteam_icon_next'),
+      slidesToShow: 3,
+      centerMode: true,
+      centerPadding: '0px',
+   });
+
+
    // Back To Top
    $(window).on('scroll', function () {
       var scrollSize = $(window).scrollTop();

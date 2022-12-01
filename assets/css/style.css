@@ -1222,11 +1222,11 @@ span{
    color: var(--textColor);
 }
 /* Our Team */
-#port_folio .pfSlider_container .p-folio_img{
+#blog .pfSlider_container .p-folio_img{
    /* transform: translateY(40%); */
    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 85%);
 }
-#port_folio .pfSlider_container .p-folio_title_section{
+#blog .pfSlider_container .p-folio_title_section{
    background: var(--secondaryColor);
    padding-top: 75px;
    padding-bottom: 18px;
@@ -1235,18 +1235,18 @@ span{
    position: relative;
    transition: .4s;
 }
-#port_folio .pfSlider_container .p-folio_item:hover .p-folio_title_section{
-   /* transform: translateY(-45%); */
-}
-#port_folio .pfSlider_container .p-folio_title_section .title h2{
+/* #blog .pfSlider_container .p-folio_item:hover .p-folio_title_section{
+   transform: translateY(-45%);
+} */
+#blog .pfSlider_container .p-folio_title_section .title h2{
    color: var(--primaryWhite);
    font-size: 18px;
 }
-#port_folio .pfSlider_container .p-folio_title_section .title p{
+#blog .pfSlider_container .p-folio_title_section .title p{
    color: var(--secondaryWhite);
    font-size: 14px;
 }
-#port_folio .pfSlider_container .p-folio_item .p-folio_title_section .p-folio_overlay{
+#blog .pfSlider_container .p-folio_item .p-folio_title_section .p-folio_overlay{
    position: absolute;
    background: var(--primaryColor);
    inset: 0;
@@ -1255,23 +1255,23 @@ span{
    visibility: hidden;
    transition: .4s;
 }
-#port_folio .pfSlider_container .p-folio_item:hover .p-folio_title_section .p-folio_overlay{
+#blog .pfSlider_container .p-folio_item.slick-center .p-folio_title_section .p-folio_overlay{
    opacity: 1;
    visibility: visible;
 }
 
-#port_folio .pfSlider_container .p-folio_title_section .p-folio_overlay h2{
+#blog .pfSlider_container .p-folio_title_section .p-folio_overlay h2{
    font-size: 18px;
 }
-#port_folio .pfSlider_container .p-folio_title_section .p-folio_overlay p{
+#blog .pfSlider_container .p-folio_title_section .p-folio_overlay p{
    font-size: 14px;
    font-size: var(--textColor);
 }
-#port_folio .pfSlider_container .p-folio_title_section .p-folio_overlay a{
+#blog .pfSlider_container .p-folio_title_section .p-folio_overlay a{
    padding-right: 7px;
    /* padding-top: 25px; */
 }
-#port_folio .pfSlider_container .p-folio_title_section .p-folio_overlay a i{
+#blog .pfSlider_container .p-folio_title_section .p-folio_overlay a i{
    font-size: 16px;
    width: 30px;
    height: 30px;
@@ -1282,8 +1282,15 @@ span{
    background-color: var(--secondaryColor);
    transition: .4s;
 }
-#port_folio .pfSlider_container .p-folio_title_section .p-folio_overlay a i:hover{
+#blog .pfSlider_container .p-folio_title_section .p-folio_overlay a i:hover{
    background-color: #0077b5;
+}
+
+#blog .blog_slider_icon .blogteam_icon_prev{
+   left: 20px;
+}
+#blog .blog_slider_icon .blogteam_icon_next{
+   right: 20px;
 }
    /* About Us Section CSS End */
 /* *** About Us Page Section CSS End *** */
