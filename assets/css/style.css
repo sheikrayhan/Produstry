@@ -1222,25 +1222,68 @@ span{
    color: var(--textColor);
 }
 /* Our Team */
-#port_folio .p-folio_item .ourteamOverlay{
-   position: absolute;
-   left: 0;
-   top: 0;
-   height: 100%;
-   width: 100%;
+#port_folio .pfSlider_container .p-folio_img{
+   /* transform: translateY(40%); */
+   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 85%);
+}
+#port_folio .pfSlider_container .p-folio_title_section{
    background: var(--secondaryColor);
-   clip-path: polygon(0 86%, 100% 73%, 100% 100%, 0% 100%);
+   padding-top: 75px;
+   padding-bottom: 18px;
+   clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
+   transform: translateY(-60%);
+   position: relative;
+   transition: .4s;
 }
-#port_folio .p-folio_item .ourteamOverlay .overlay_content{
-   margin-bottom: 10px;
+#port_folio .pfSlider_container .p-folio_item:hover .p-folio_title_section{
+   /* transform: translateY(-45%); */
 }
-#port_folio .p-folio_item .ourteamOverlay .overlay_content h3{
-   color: var(--secondaryWhite);
+#port_folio .pfSlider_container .p-folio_title_section .title h2{
+   color: var(--primaryWhite);
    font-size: 18px;
 }
-#port_folio .p-folio_item .ourteamOverlay .overlay_content p{
+#port_folio .pfSlider_container .p-folio_title_section .title p{
    color: var(--secondaryWhite);
    font-size: 14px;
+}
+#port_folio .pfSlider_container .p-folio_item .p-folio_title_section .p-folio_overlay{
+   position: absolute;
+   background: var(--primaryColor);
+   inset: 0;
+   padding-top: 38px;
+   opacity: 0;
+   visibility: hidden;
+   transition: .4s;
+}
+#port_folio .pfSlider_container .p-folio_item:hover .p-folio_title_section .p-folio_overlay{
+   opacity: 1;
+   visibility: visible;
+}
+
+#port_folio .pfSlider_container .p-folio_title_section .p-folio_overlay h2{
+   font-size: 18px;
+}
+#port_folio .pfSlider_container .p-folio_title_section .p-folio_overlay p{
+   font-size: 14px;
+   font-size: var(--textColor);
+}
+#port_folio .pfSlider_container .p-folio_title_section .p-folio_overlay a{
+   padding-right: 7px;
+   /* padding-top: 25px; */
+}
+#port_folio .pfSlider_container .p-folio_title_section .p-folio_overlay a i{
+   font-size: 16px;
+   width: 30px;
+   height: 30px;
+   line-height: 30px !important;
+   text-align: center;
+   border-radius: 15px;
+   color: var(--primaryWhite);
+   background-color: var(--secondaryColor);
+   transition: .4s;
+}
+#port_folio .pfSlider_container .p-folio_title_section .p-folio_overlay a i:hover{
+   background-color: #0077b5;
 }
    /* About Us Section CSS End */
 /* *** About Us Page Section CSS End *** */
