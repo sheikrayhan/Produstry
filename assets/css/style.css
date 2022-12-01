@@ -1,0 +1,1246 @@
+/*
+Template Name:
+Author:
+Version: 1.0.0
+Author URL:
+UI Designer:
+Description:
+
+Table Of Content
+========================
+1. Header Section
+      1.1) Top Bar
+      1.2) NAv Bar
+2. Banner Section
+3. Service Section
+
+*/
+
+/* Common Css Start */
+:root{
+   --primaryColor: #ffca36;
+   --secondaryColor:#353535;
+   --primaryWhite:#ffff;
+   --secondaryWhite:#dddddd;
+   --textColor:#555555;
+}
+body{
+   font-family: 'Roboto', sans-serif;
+   color: var(--textColor);
+}
+h1,h2,h3,h4,h5,h6{
+   color: var(--secondaryColor);
+}
+h1,h2,h3,h4,h5,h6,
+p,
+ul,ol,
+span,
+small,
+button{
+   margin: 0;
+   padding: 0;
+}
+ol,ul{
+   list-style-type: none;
+}
+a,a:hover{
+   text-decoration: none;
+   display: inline-block;
+}
+/* //Common Css End */
+
+/* Preloader Section CSS Start */
+#preloader{
+   position: fixed;
+   z-index: 99999999999999;
+   width: 100%;
+   height: 100%;
+   background-color: #ECF0F1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* Preloader Section CSS End */
+
+/* Header Section CSS Start */
+
+#nav.menuActive{
+   position: fixed;
+   background: white;
+   width: 100%;
+   z-index: 999;
+   animation: menu_fixed 1s;
+   top: 0;
+   box-shadow: 0 2px 10px -5px  rgba(0, 0, 0, 0.6);
+}
+@keyframes menu_fixed {
+   from{
+       top: -100px;
+   }
+   to{
+       top: 0px;
+   }
+}
+
+#header #topBar{
+   background: var(--primaryColor);
+}
+#header #topBar .topbar_left p{
+   color: var(--secondaryColor);
+   font-size: 14px;
+}
+#header #topBar .topbar_mid{
+   background: var(--secondaryColor);
+   transform: skew(-35deg);
+   padding: 10px;
+}
+#header #topBar .topbar_mid p{
+   transform: skew(35deg);
+   text-align: center;
+   color: var(--primaryWhite);
+   font-size: 14px;
+}
+#header #topBar .topbar_right ul li a i{
+   width: 24px;
+   height: 24px;
+   text-align: center;
+   line-height: 24px;
+   /* border: 1px solid black; */
+}
+#header #topBar .topbar_right ul{
+   margin-left: 5px;
+}
+#header #topBar .topbar_right ul li{
+   position: relative;
+   line-height: 0;
+   margin-right: 10px;
+}
+#header #topBar .topbar_right ul li::after{
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 1px;
+   background-color: var(--secondaryColor);
+   top: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleY(0);
+   transition: .4s;
+}
+#header #topBar .topbar_right ul li::before{
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 1px;
+   background-color: var(--secondaryColor);
+   top: 0;
+   right: 0;
+   z-index: 55;
+   transform: scaleY(0);
+   transition: .4s;
+}
+#header #topBar .topbar_right ul li:hover:after,
+#header #topBar .topbar_right ul li:hover::before{
+   transform: scaleY(1.3);
+}
+#header #topBar .topbar_right ul li a{
+   position: relative;
+   color: var(--secondaryColor);
+}
+#header #topBar .topbar_right ul li a::after{
+   content: '';
+   position: absolute;
+   height: 1px;
+   width: 100%;
+   background-color: var(--secondaryColor);
+   bottom: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleX(0);
+   transition: .4s;
+}
+#header #topBar .topbar_right ul li a::before{
+   content: '';
+   position: absolute;
+   height: 1px;
+   width: 100%;
+   background-color: var(--secondaryColor);
+   top: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleX(0);
+   transition: .4s;
+}
+#header #topBar .topbar_right ul li:hover a:after,
+#header #topBar .topbar_right ul li:hover a::before{
+   transform: scaleX(1.3);
+}
+/* NavBar */
+#header #nav #siteLogo{
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%);
+   transition: .4s;
+}
+#header #nav #siteLogo.menuActive{
+   left: 0;
+   transform: initial;
+}
+#header #nav #mainMenu ul{
+   opacity: 0;
+   visibility: hidden;
+}
+#header #nav #mainMenu ul.menuActive{
+   opacity: 1;
+   visibility: visible;
+}
+#header #nav #navbarToggler.menuActive{
+   color: var(--primaryColor);
+}
+#header #nav #navbarToggler {
+	margin-left: 20px;
+}
+#header #nav #mainMenu ul li{
+   position: relative;
+   margin: 32px 0px;
+}
+#header #nav #mainMenu ul li::after{
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 1px;
+   background-color: var(--secondaryColor);
+   top: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleY(0);
+   transition: .4s;
+}
+#header #nav #mainMenu ul li::before{
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 1px;
+   background-color: var(--secondaryColor);
+   top: 0;
+   right: 0;
+   z-index: 55;
+   transform: scaleY(0);
+   transition: .4s;
+}
+#header #nav #mainMenu ul li:hover:after,
+#header #nav #mainMenu ul li:hover::before{
+   transform: scaleY(1.3);
+   background-color: var(--primaryColor);
+}
+#header #nav #mainMenu ul li a{
+   position: relative;
+   font-size: 16px;
+   font-weight: 500;
+   color: var(--secondaryColor);
+}
+#header #nav #mainMenu ul li a::after{
+   content: '';
+   position: absolute;
+   height: 1px;
+   width: 100%;
+   background-color: var(--secondaryColor);
+   bottom: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleX(0);
+   transition: .4s;
+}
+#header #nav #mainMenu ul li a::before{
+   content: '';
+   position: absolute;
+   height: 1px;
+   width: 100%;
+   background-color: var(--secondaryColor);
+   top: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleX(0);
+   transition: .4s;
+}
+#header #nav #mainMenu ul li:hover a:after,
+#header #nav #mainMenu ul li:hover a::before{
+   transform: scaleX(1.3);
+   background-color: var(--primaryColor);
+}
+#header #nav #mainMenu ul li.active a:after,
+#header #nav #mainMenu ul li.active a::before,
+#header #nav #mainMenu ul li.active:after,
+#header #nav #mainMenu ul li.active::before{
+   transform: scale(1.3);
+   background-color: var(--primaryColor);
+}
+#header #nav #mainMenu ul li a:hover,
+#header #nav #mainMenu ul li.active a{
+   color: var(--primaryColor);
+}
+/* Header Section CSS End */
+
+/* Banner Section CSS Start */
+#banner{
+   position: relative;
+}
+#banner .bannerSlider .bannerSlider_item{
+   height: 700px;
+   background-position: center !important;
+   background-size: cover !important;
+   position: relative;
+   z-index: 1;
+}
+#banner .bannerSlider .bannerSlider_item::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    opacity: 0.70;
+    background-color: black;
+    z-index: -1;
+}
+#banner .bannerSlider .bannerSlider_item .container h1{
+   font-size: 35px;
+   font-weight: 500;
+   color: var(--primaryWhite);
+}
+#banner .bannerSlider .bannerSlider_item .container h1 span{
+   color: var(--primaryColor);
+}
+#banner .bannerSlider .bannerSlider_item .container p{
+   font-size: 14px;
+   color: var(--secondaryWhite);
+   padding: 30px 0px 60px 0px;
+   text-align: justify;
+}
+#banner .bannerSlider .bannerSlider_item .container a{
+   color: var(--primaryWhite);
+   font-size: 16px;
+   font-weight: 500;
+   text-transform: uppercase;
+   border: 1px solid var(--primaryWhite);
+   padding: 17px 19px;
+   margin-right: 30px;
+   transition: .5s;
+}
+#banner .bannerSlider .bannerSlider_item .container a:hover{
+   background-color: var(--primaryColor);
+   color: var(--secondaryColor);
+   border: 1px solid var(--primaryColor );
+}
+#banner .banner_slider_icon button{
+   border: none;
+   background: none;
+   position: absolute;
+   z-index: 99;
+   top: 50%;
+   transform: translateY(-50%);
+}
+#banner .banner_slider_icon .prev{
+   left: 25px;
+}
+#banner .banner_slider_icon .next{
+   right: 25px;
+}
+#banner .banner_slider_icon i{
+   height: 60px;
+   width: 60px;
+   line-height: 60px;
+   text-align: center;
+   font-size: 40px;
+   color: var(--primaryWhite);
+   transition: .4s;
+}
+#banner .banner_slider_icon i:hover{
+   color: var(--primaryColor);
+}
+#banner .banner_slider_icon button::before{
+   content: '';
+   position: absolute;
+   height: 1px;
+   width: 100%;
+   background-color: var(--primaryWhite);
+   top: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleX(1.3);
+   transition: .4s;
+}
+#banner .banner_slider_icon button::after{
+   content: '';
+   position: absolute;
+   height: 1px;
+   width: 100%;
+   background-color: var(--primaryWhite);
+   bottom: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleX(1.3);
+   transition: .4s;
+}
+#banner .banner_slider_icon button span::before{
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 1px;
+   background-color: var(--primaryWhite);
+   top: 0;
+   right: 0;
+   z-index: 55;
+   transform: scaleY(1.3);
+   transition: .4s;
+}
+#banner .banner_slider_icon button span::after{
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 1px;
+   background-color: var(--primaryWhite);
+   bottom: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleY(1.3);
+   transition: .4s;
+}
+#banner .banner_slider_icon button:hover::after,
+#banner .banner_slider_icon button:hover::before,
+#banner .banner_slider_icon button:hover span::after,
+#banner .banner_slider_icon button:hover span::before{
+   background-color: var(--primaryColor);
+}
+/* Banner Section CSS End */
+
+/* Service Section CSS Start */
+#service{
+   padding: 80px 0px 40px;
+}
+#service .container .section_heading{
+   padding-bottom: 50px;
+}
+#service .container .section_heading h2{
+   font-size: 35px;
+   font-weight: 300;
+}
+#service .container .section_heading P{
+   font-size: 16px;
+   color: var(--textColor);
+   letter-spacing: 1px;
+   padding: 25px 0px 25px 0px;
+}
+#service .container .row .img_section{
+   height: 80px;
+   width: 80px;
+   text-align: center;
+   line-height: 80px;
+   border: 1px solid var(--secondaryColor);
+   transform: rotate(45deg);
+   margin: auto;
+   transition: .4s;
+}
+#service .container .row .img_section img{
+   transform: rotate(-45deg);
+   padding: 15px;
+}
+#service .container .row .section_info{
+   margin: 45px 0px;
+   border: 1px solid var(--secondaryColor);
+   padding: 60px 30px;
+   position: relative;
+   transition: .4s;
+}
+#service .container .row .section_info::after {
+	content: '';
+	position: absolute;
+	height: 30px;
+	border: 1px dashed;
+	top: -30px;
+	left: 50%;
+	z-index: 55;
+	transition: .4s;
+	transform: translateX(-50%);
+}
+#service .container .row .section_info h2{
+   font-size: 18px;
+   padding-bottom: 30px;
+   text-transform: uppercase;
+}
+#service .container .row .section_info p{
+   font-size: 14px;
+   color: var(--textColor);
+}
+#service .col-4:hover .img_section,
+#service .col-4:hover .section_info,
+#service .col-4:hover .section_info::after{
+   border-color: var(--primaryColor);
+}
+/* Service Section CSS End */
+
+/* About Us Section CSS Start */
+#about{
+   margin-bottom: 90px;
+}
+#about .about_img img{
+   background-size: cover;
+   min-height: 410px;
+}
+#about .about_info{
+   padding: 0px 200px 0px 40px;
+   z-index: 99;
+}
+#about .about_info h2{
+   font-size: 35px;
+   font-weight: 300;
+   color: var(--secondaryColor);
+}
+
+#about .about_info ul{
+   border-bottom:none;
+}
+#about .about_info ul li{
+   border-bottom: 5px solid #ddd;
+}
+#about .about_info ul li button{
+   font-size: 18px;
+   color: var(--secondaryColor);
+   font-weight: 500;
+   text-transform: uppercase;
+   background: none;
+   border: none;
+   padding: 15px 64px 15px 0;
+   transition: .4s;
+   position: relative;
+}
+#about .about_info ul li button::after{
+   content: '';
+   position: absolute;
+   width: 0;
+   height: 5px;
+   right: 0;
+   bottom: -5px;
+   background: var(--primaryColor);
+   transition: .4s;
+}
+#about .about_info ul li:hover button::after,
+#about .about_info ul li button.active::after{
+   width: 100%;
+   left: 0;
+}
+#about .about_info .tab-content p{
+   padding-top: 30px;
+   font-size: 14px;
+   color: var(--textColor);
+   text-align: justify;
+}
+#about .about_info .tab-content a{
+   color: var(--secondaryColor);
+   font-size: 16px;
+   font-weight: 500;
+   text-transform: uppercase;
+   border: 0px solid var(--primaryWhite);
+   padding: 20px 20px;
+   margin-top: 30px;
+   transition: .5s;
+}
+#about .about_info .tab-content a:hover{
+   background-color: var(--primaryColor);
+}
+/* About Us Section CSS End */
+
+/* Port Folio Section CSS Start */
+#port_folio .heading h2{
+   font-size: 35px;
+   font-weight: 300;
+}
+#port_folio .heading p{
+   padding: 30px 20px 50px 20px;
+   font-size: 16px;
+   color: var(--textColor);
+}
+#port_folio .p-folio_item{
+   position: relative;
+}
+#port_folio .p-folio_item img{
+   height: 350px;
+   /* width: 270px; */
+}
+#port_folio .p-folio_item .overlay{
+   position: absolute;
+   left: 0;
+   top: 0;
+   height: 100%;
+   width: 100%;
+   background: rgba(255, 201, 54, 0.85);
+   clip-path: polygon(0 70%, 100% 45%, 100% 100%, 0% 100%);
+   opacity: 0;
+   visibility: hidden;
+   transition: 0.5s;
+}
+#port_folio .p-folio_item:hover .overlay{
+   opacity: 1;
+   visibility: visible;
+}
+#port_folio .p-folio_item .overlay
+.overlay_content{
+padding-bottom: 20px;
+}
+
+#port_folio .countdown_section{
+   background: url(../images/pfolio_bg.jpg) fixed;
+   height: 200px;
+   width: 100%;
+   background-size: cover;
+   background-position: center;
+   margin: 90px 0px;
+   position: relative;
+   z-index: 1;
+}
+#port_folio .countdown_section::after{
+   content: '';
+   position: absolute;
+   inset: 0;
+   background-color: var(--secondaryColor);
+   opacity: 65%;
+   z-index: -1;
+}
+#port_folio .countdown_section h2{
+   color: var(--primaryWhite);
+   font-size: 35px;
+   font-weight: 700;
+}
+#port_folio .countdown_section p{
+   font-size: 18px;
+   color: var(--primaryWhite);
+}
+
+/* Port Folio Section CSS End */
+
+/* Our Blog Section CSS Start */
+#blog{
+   margin-top: 100px;
+   margin-bottom: 100px;
+   position: relative;
+}
+#blog .container .blog_heading h2{
+   font-size: 35px;
+   font-weight: 300;
+   padding-bottom: 35px;
+}
+#blog .container .blog_heading p{
+   font-size: 16px;
+   color: var(--textColor);
+   padding: 0px 20px 60px 20px;
+}
+#blog .blog_slider_item .thumbnail{
+   position: relative;
+   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+   transform: translateY(50%);
+   transition: .4s;
+}
+#blog .blog_slider_item.slick-center .thumbnail{
+   clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+   transform: translateY(0);
+}
+#blog .blog_slider_item .thumbnail .overlay{
+   position: absolute;
+   /* content: ''; */
+   inset: 0;
+   background: rgba(0, 0, 0, 0.6);
+   opacity: 0;
+   visibility: hidden;
+   transition: .4s;
+}
+#blog .blog_slider_item.slick-center .thumbnail .overlay{
+   opacity: 1;
+   visibility: visible;
+}
+#blog .blog_slider_item .thumbnail .overlay i{
+   font-size: 16px;
+   height: 40px;
+   width: 40px;
+   line-height: 40px;
+   border-radius: 20px;
+   text-align: center;
+   transition: .4s;
+   color: var(--secondaryColor);
+   background-color: var(--primaryColor);
+}
+#blog .blog_slider_item .blog_info{
+   transform: translateY(-50%);
+   padding: 100px 15px 15px;
+   z-index: -1;
+   position: relative;
+   opacity: 0;
+   visibility: hidden;
+   border: 1px solid #dddddd;
+   border-top: 0;
+   transition: .4s;
+}
+#blog .blog_slider_item.slick-center .blog_info{
+   transform: translateY(-40px);
+   opacity: 1;
+   visibility: visible;
+}
+#blog .blog_info h2{
+   font-size: 18px;
+   font-weight: 400;
+}
+#blog .blog_info .user_react{
+   font-size: 13px;
+   margin-top: 20px;
+   margin-bottom: 33px;
+}
+#blog .blog_info .user_react a{
+   padding-right: 15px;
+   font-size: 13px;
+   color: var(--textColor);
+}
+#blog .blog_info p{
+   font-size: 14px;
+   line-height: 25px;
+   text-align: justify;
+   text-align-last: center;
+}
+#blog .blog_info a.readmore{
+   font-size: 16px;
+   font-weight: 500;
+   color: var(--secondaryColor);
+   padding: 15px 20px;
+   background: var(--primaryColor);
+   display: block;
+   margin: 30px auto;
+   width: fit-content;
+   cursor: pointer;
+}
+
+#blog .blog_slider_icon button{
+   border: none;
+   background: none;
+   position: absolute;
+   z-index: 99;
+   top: 50%;
+   transform: translateY(-50%);
+}
+#blog .blog_slider_icon .blog_icon_prev{
+   left: 25px;
+}
+#blog .blog_slider_icon .blog_icon_next{
+   right: 25px;
+}
+#blog .blog_slider_icon i{
+   height: 50px;
+   width: 50px;
+   line-height: 50px;
+   text-align: center;
+   font-size: 40px;
+   color: var(--secondaryColor);
+   transition: .4s;
+}
+#blog .blog_slider_icon i:hover{
+   color: var(--primaryColor);
+}
+#blog .blog_slider_icon button::before{
+   content: '';
+   position: absolute;
+   height: 1px;
+   width: 100%;
+   background-color: var(--secondaryColor);
+   top: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleX(1.3);
+   transition: .4s;
+}
+#blog .blog_slider_icon button::after{
+   content: '';
+   position: absolute;
+   height: 1px;
+   width: 100%;
+   background-color: var(--secondaryColor);
+   bottom: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleX(1.3);
+   transition: .4s;
+}
+#blog .blog_slider_icon button span::before{
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 1px;
+   background-color: var(--secondaryColor);
+   top: 0;
+   right: 0;
+   z-index: 55;
+   transform: scaleY(1.3);
+   transition: .4s;
+}
+#blog .blog_slider_icon button span::after{
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 1px;
+   background-color: var(--secondaryColor);
+   bottom: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleY(1.3);
+   transition: .4s;
+}
+#blog .blog_slider_icon button:hover::after,
+#blog .blog_slider_icon button:hover::before,
+#blog .blog_slider_icon button:hover span::after,
+#blog .blog_slider_icon button:hover span::before{
+   background-color: var(--primaryColor);
+}
+/* Our Blog Section CSS End */
+
+/* Our Testimonial Section CSS Start */
+#testimonial{
+   margin-bottom: 95px;
+}
+#testimonial .container .testimonial-headinng h2{
+   font-size: 35px;
+   font-weight: 300;
+   padding-bottom: 35px;
+}
+#testimonial .container .testimonial-headinng p{
+   font-size: 16px;
+   color: var(--textColor);
+   padding: 0px 20px 60px 20px;
+}
+#testimonial .testimonial_slider{
+   background: url(../images/our-testimonial_bg.png) fixed;
+   background-size: cover;
+   background-position: center;
+   position: relative;
+   z-index: 1;
+}
+#testimonial .testimonial_slider::after{
+   position: absolute;
+   content: '';
+   inset: 0;
+   background-color: black;
+   opacity: 80%;
+   z-index: -1;
+}
+#testimonial .testimonial_slider .slider_single p{
+   font-size: 14px;
+   color: var(--secondaryWhite);
+   line-height: 25px;
+   text-align: justify;
+   text-align-last: center;
+   padding: 55px 25px 25px 25px;
+}
+#testimonial .testimonial_slider .slider_single h2{
+   font-size: 18px;
+   font-weight: 700;
+   color: var(--primaryWhite);
+}
+#testimonial .testimonial_slider .slider_single h6{
+   font-size: 14px;
+   color: var(--primaryWhite);
+   padding: 5px 0px;
+}
+#testimonial .testimonial_slider .slider_single i{
+   font-size: 14px;
+   color: var(--primaryColor);
+}
+
+#testimonial .testimonial_slider .slider_nav{
+   margin: 30px 0px 50px 0px;
+}
+
+#testimonial .testimonial_slider_icon button{
+   border: none;
+   background: none;
+   position: absolute;
+   z-index: 99;
+   top: 50%;
+   transform: translateY(-50%);
+}
+#testimonial .testimonial_slider_icon .testimonial_slider_icon_prev{
+   left: 295px;
+}
+#testimonial .testimonial_slider_icon .testimonial_slider_icon_next{
+   right: 295px;
+}
+#testimonial .testimonial_slider_icon i{
+   height: 50px;
+   width: 50px;
+   line-height: 50px;
+   text-align: center;
+   font-size: 40px;
+   color: var(--secondaryWhite);
+   transition: .4s;
+}
+#testimonial .testimonial_slider_icon i:hover{
+   color: var(--primaryColor);
+}
+#testimonial .testimonial_slider_icon button::before{
+   content: '';
+   position: absolute;
+   height: 1px;
+   width: 100%;
+   background-color: var(--secondaryWhite);
+   top: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleX(1.3);
+   transition: .4s;
+}
+#testimonial .testimonial_slider_icon button::after{
+   content: '';
+   position: absolute;
+   height: 1px;
+   width: 100%;
+   background-color: var(--secondaryWhite);
+   bottom: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleX(1.3);
+   transition: .4s;
+}
+#testimonial .testimonial_slider_icon button span::before{
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 1px;
+   background-color: var(--secondaryWhite);
+   top: 0;
+   right: 0;
+   z-index: 55;
+   transform: scaleY(1.3);
+   transition: .4s;
+}
+#testimonial .testimonial_slider_icon button span::after{
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 1px;
+   background-color: var(--secondaryWhite);
+   bottom: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleY(1.3);
+   transition: .4s;
+}
+#testimonial .testimonial_slider_icon button:hover::after,
+#testimonial .testimonial_slider_icon button:hover::before,
+#testimonial .testimonial_slider_icon button:hover span::after,
+#testimonial .testimonial_slider_icon button:hover span::before{
+   background-color: var(--primaryColor);
+}
+/* Our Testimonial Section CSS End */
+
+/* Brand Section CSS Start */
+#brand{
+   position: relative;
+   margin-bottom: 100px;
+}
+#brand .container .brand_slider_item .brand_item{
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+#brand .container .brand_slider_item .brand_item img{
+   padding: 35px 14px;
+   background-color: #f1f1f1;
+   transition: .4s;
+}
+#brand .brand_item.slick-center img{
+   box-shadow: 0px 0px 6px 2px rgba(181,181,181,1);
+}
+
+#brand .brand_slider_icon button{
+   border: none;
+   background: none;
+   position: absolute;
+   z-index: 99;
+   top: 50%;
+   transform: translateY(-50%);
+}
+#brand .brand_slider_icon .brand_icon_prev{
+   left: 25px;
+}
+#brand .brand_slider_icon .brand_icon_next{
+   right: 25px;
+}
+#brand .brand_slider_icon i{
+   height: 50px;
+   width: 50px;
+   line-height: 50px;
+   text-align: center;
+   font-size: 40px;
+   color: var(--secondaryColor);
+   transition: .4s;
+}
+#brand .brand_slider_icon i:hover{
+   color: var(--primaryColor);
+}
+#brand .brand_slider_icon button::before{
+   content: '';
+   position: absolute;
+   height: 1px;
+   width: 100%;
+   background-color: var(--secondaryColor);
+   top: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleX(1.3);
+   transition: .4s;
+}
+#brand .brand_slider_icon button::after{
+   content: '';
+   position: absolute;
+   height: 1px;
+   width: 100%;
+   background-color: var(--secondaryColor);
+   bottom: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleX(1.3);
+   transition: .4s;
+}
+#brand .brand_slider_icon button span::before{
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 1px;
+   background-color: var(--secondaryColor);
+   top: 0;
+   right: 0;
+   z-index: 55;
+   transform: scaleY(1.3);
+   transition: .4s;
+}
+#brand .brand_slider_icon button span::after{
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 1px;
+   background-color: var(--secondaryColor);
+   bottom: 0;
+   left: 0;
+   z-index: 55;
+   transform: scaleY(1.3);
+   transition: .4s;
+}
+#brand .brand_slider_icon button:hover::after,
+#brand .brand_slider_icon button:hover::before,
+#brand .brand_slider_icon button:hover span::after,
+#brand .brand_slider_icon button:hover span::before{
+   background-color: var(--primaryColor);
+}
+/* Brand Section CSS End */
+
+/* Footer Section CSS Start */
+#top-section{
+   background-color: var(--secondaryColor);
+   margin-top: 60px;
+}
+footer .container h2{
+   font-size: 18px;
+   color: var(--primaryWhite);
+   padding: 40px 0px 30px 0px ;
+}
+footer .container .img_section{
+   padding: 60px 30px 60px 0px;
+}
+footer .container .img_section p{
+   font-size: 14px;
+   color: var(--secondaryWhite);
+   line-height: 25px;
+   padding: 28px 0px;
+}
+footer .container .img_section a{
+   padding-right: 15px;
+   padding-bottom: 70px;
+}
+footer .container .img_section a i{
+   font-size: 20px;
+   width: 30px;
+   height: 30px;
+   line-height: 30px;
+   text-align: center;
+   border-radius: 15px;
+   background-color: var(--secondaryWhite);
+   color: var(--secondaryColor);
+   transition: .4s;
+}
+footer .container .img_section a:hover i{
+   color: var(--secondaryColor);
+   background-color: var(--primaryColor);
+}
+footer .container .contact_section{
+   padding: 55px 30px 55px 0px;
+}
+footer .container .contact_section .contact_icon i{
+   font-size: 20px;
+   width: 30px;
+   height: 30px;
+   line-height: 30px;
+   text-align: center;
+   border-radius: 15px;
+   background-color: var(--primaryColor);
+   color: var(--secondaryColor);
+}
+footer .container .contact_section .calls{
+   padding: 25px 0px;
+}
+footer .container .contact_section .maps .map_info a,
+footer .container .contact_section .calls .call_info a,
+footer .container .contact_section .mails .mails-info a{
+   font-size: 14px;
+   color: var(--secondaryWhite);
+   padding-left: 10px;
+}
+footer .container .important_links{
+   padding: 60px 30px 60px 0px;
+}
+footer .container .important_links .links a{
+   display: block;
+   color: var(--secondaryWhite);
+   font-size: 14px;
+   padding:4px 0px;
+   transition: .4s;
+}
+footer .container .important_links .links a:hover{
+   color: var(--primaryColor);
+}
+footer .container .latest_news{
+   padding: 60px 0px 60px 0px;
+}
+footer .container .latest_news .img_info h5{
+   font-size: 14px;
+   color: var(--secondaryWhite);
+}
+footer .container .latest_news .img_info p{
+   color: var(--secondaryWhite);
+   font-size: 14px;
+   padding: 5px 0px 18px 0px;
+}
+footer .container .latest_news .news_info{
+   padding-bottom: 30px;
+}
+footer .container .latest_news .img_info a{
+   font-size: 13px;
+   color: var(--secondaryWhite);
+   padding-right: 8px;
+}
+footer .container .latest_news .img_info{
+   padding-left: 10px;
+}
+
+footer .copyright{
+   background-color: var(--textColor);
+}
+footer .copyright .item{
+   color: var(--secondaryWhite);
+   font-size: 14px;
+   padding: 20px 0px;
+   border: 1px solid var(--secondaryWhite);
+   border-left: none;
+   border-right: none;
+}
+footer .copyright .item span{
+   color: var(--primaryColor);
+}
+/* Footer Section CSS End */
+
+/* Back to Top Section CSS Start */
+#backtotop{
+   position: fixed;
+   right: 20px;
+   bottom: 20px;
+   border: none;
+   width: 35px;
+   height: 35px;
+   border-radius: 50%;
+   background: var(--textColor);
+   color: var(--secondaryWhite);
+   z-index: 9999;
+   transition: .5s;
+   cursor: pointer;
+   display: none;
+}
+#backtotop:hover{
+   background: var(--primaryWhite);
+   color: var(--secondaryColor);
+}
+/* Back to Top Section CSS End */
+
+/* *** About Us Page Section CSS Start *** */
+/* About Us Section CSS Start */
+#aboutUs{
+   background: url(../images/about_us_page_bg.png) fixed;
+   height: 300px;
+   background-size: cover;
+   background-position: center;
+   position: relative;
+   z-index: 1;
+}
+#aboutUs::after{
+   position: absolute;
+   content: '';
+   inset: 0;
+   background-color: rgba(0, 0, 0, 0.9);
+   z-index: -1;
+}
+#aboutUs .heading h1{
+   color: var(--primaryWhite);
+   font-size: 35px;
+   text-transform: uppercase;
+}
+#aboutUs .heading p,
+span{
+   font-size: 18px;
+   color: var(--primaryWhite);
+   padding-top: 20px;
+}
+#aboutUs .heading span{
+   color: var(--primaryColor);
+}
+#about .about_title p{
+   text-align: justify;
+   color: var(--textColor);
+   font-size: 14px;
+}
+#about .about_img.about_us_img img{
+   min-height: 380px;
+}
+#about .about_info .title_section{
+   padding: 0px 40px 0px 200px;
+}
+#about .about_info .title_section .checkbox i{
+   color: var(--primaryColor);
+   font-size: 14px;
+   padding: 0px 10px 0px 35px;
+}
+#about .about_info .title_section .checkbox span{
+   font-size: 14px;
+   color: var(--textColor);
+}
+/* Our Team */
+#port_folio .p-folio_item .ourteamOverlay{
+   position: absolute;
+   left: 0;
+   top: 0;
+   height: 100%;
+   width: 100%;
+   background: var(--secondaryColor);
+   clip-path: polygon(0 86%, 100% 73%, 100% 100%, 0% 100%);
+}
+#port_folio .p-folio_item .ourteamOverlay .overlay_content{
+   margin-bottom: 10px;
+}
+#port_folio .p-folio_item .ourteamOverlay .overlay_content h3{
+   color: var(--secondaryWhite);
+   font-size: 18px;
+}
+#port_folio .p-folio_item .ourteamOverlay .overlay_content p{
+   color: var(--secondaryWhite);
+   font-size: 14px;
+}
+   /* About Us Section CSS End */
+/* *** About Us Page Section CSS End *** */
