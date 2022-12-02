@@ -474,6 +474,7 @@ a,a:hover{
 #service .col-4:hover .section_info,
 #service .col-4:hover .section_info::after{
    border-color: var(--primaryColor);
+   box-shadow: 1px 2px 5px 1px rgba(58,55,55,0.75);
 }
 /* Service Section CSS End */
 
@@ -1233,6 +1234,7 @@ span{
    clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
    padding: 65px 70px 15px 70px;
    transform: translateY(-12%);
+   transition: .4s;
 }
 #blog .pfSlider_container .p-folio_title_section .title h2{
    color: var(--primaryWhite);
@@ -1243,10 +1245,6 @@ span{
    font-size: 14px;
 }
 #blog .pfSlider_container .p-folio_title_section .social_icon{
-   /* opacity: 0;
-   visibility: hidden; */
-}
-#blog .pfSlider_container .p-folio_title_section .social_icon a{
    padding-top: 25px;
 }
 #blog .pfSlider_container .p-folio_title_section .social_icon a i{

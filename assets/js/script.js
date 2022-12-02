@@ -19,6 +19,12 @@ $(function () {
       autoplaySpeed: (1500),
   });
 
+   // Counter Up Activate
+   $('.counter').counterUp({
+      delay: 10,
+      time: 1000
+  });
+
    // Our Blog Slick Activation
    $('.blog_slider_container').slick({
       prevArrow: $('.blog_icon_prev'),
