@@ -1221,23 +1221,19 @@ span{
    font-size: 14px;
    color: var(--textColor);
 }
-/* Our Team */
+
+/* Our Team = Blog */
+
 #blog .pfSlider_container .p-folio_img{
-   /* transform: translateY(40%); */
-   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 85%);
+   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 95%);
+   transform: translateY(12%);
 }
 #blog .pfSlider_container .p-folio_title_section{
    background: var(--secondaryColor);
-   padding-top: 75px;
-   padding-bottom: 18px;
-   clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
-   transform: translateY(-60%);
-   position: relative;
-   transition: .4s;
+   clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+   padding: 65px 70px 15px 70px;
+   transform: translateY(-12%);
 }
-/* #blog .pfSlider_container .p-folio_item:hover .p-folio_title_section{
-   transform: translateY(-45%);
-} */
 #blog .pfSlider_container .p-folio_title_section .title h2{
    color: var(--primaryWhite);
    font-size: 18px;
@@ -1246,32 +1242,14 @@ span{
    color: var(--secondaryWhite);
    font-size: 14px;
 }
-#blog .pfSlider_container .p-folio_item .p-folio_title_section .p-folio_overlay{
-   position: absolute;
-   background: var(--primaryColor);
-   inset: 0;
-   padding-top: 38px;
-   opacity: 0;
-   visibility: hidden;
-   transition: .4s;
+#blog .pfSlider_container .p-folio_title_section .social_icon{
+   /* opacity: 0;
+   visibility: hidden; */
 }
-#blog .pfSlider_container .p-folio_item.slick-center .p-folio_title_section .p-folio_overlay{
-   opacity: 1;
-   visibility: visible;
+#blog .pfSlider_container .p-folio_title_section .social_icon a{
+   padding-top: 25px;
 }
-
-#blog .pfSlider_container .p-folio_title_section .p-folio_overlay h2{
-   font-size: 18px;
-}
-#blog .pfSlider_container .p-folio_title_section .p-folio_overlay p{
-   font-size: 14px;
-   font-size: var(--textColor);
-}
-#blog .pfSlider_container .p-folio_title_section .p-folio_overlay a{
-   padding-right: 7px;
-   /* padding-top: 25px; */
-}
-#blog .pfSlider_container .p-folio_title_section .p-folio_overlay a i{
+#blog .pfSlider_container .p-folio_title_section .social_icon a i{
    font-size: 16px;
    width: 30px;
    height: 30px;
@@ -1282,7 +1260,7 @@ span{
    background-color: var(--secondaryColor);
    transition: .4s;
 }
-#blog .pfSlider_container .p-folio_title_section .p-folio_overlay a i:hover{
+#blog .pfSlider_container .p-folio_title_section .social_icon a i:hover{
    background-color: #0077b5;
 }
 

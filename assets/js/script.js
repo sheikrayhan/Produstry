@@ -62,13 +62,13 @@ $(function () {
    });
 
    // Abot Page Our Team Slick Initialize
-   $('.pfSlider_container').slick({
-      prevArrow: $('.blogteam_icon_prev'),
-      nextArrow: $('.blogteam_icon_next'),
-      slidesToShow: 3,
-      centerMode: true,
-      centerPadding: '0px',
-   });
+   // $('.pfSlider_container').slick({
+   //    prevArrow: $('.blogteam_icon_prev'),
+   //    nextArrow: $('.blogteam_icon_next'),
+   //    slidesToShow: 3,
+   //    centerMode: true,
+   //    centerPadding: '0px',
+   // });
 
 
    // Back To Top
