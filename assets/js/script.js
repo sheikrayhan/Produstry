@@ -37,8 +37,8 @@ $(function () {
       asNavFor: '.slider_nav',
       arrows: false,
       draggable:false,
-    });
-    $('.slider_nav').slick({
+   });
+   $('.slider_nav').slick({
       slidesToShow: 3,
       slidesToScroll: 1,
       asNavFor: '.slider_item',
@@ -48,7 +48,7 @@ $(function () {
       centerMode: true,
       centerPadding:'0px',
       focusOnSelect: true
-    });
+   });
 
    // Brand Slider Slick Activation
    $('.brand_slider_item').slick({
@@ -73,9 +73,9 @@ $(function () {
     // Counter Up Activate
    $('.counter').counterUp({
       delay: 10,
-      time: 1000
-  });
-
+      time: 1000,
+   });
+   
    // Back To Top
    $(window).on('scroll', function () {
       var scrollSize = $(window).scrollTop();

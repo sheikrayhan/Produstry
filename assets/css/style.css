@@ -848,6 +848,17 @@ padding-bottom: 20px;
    font-size: 14px;
    color: var(--primaryColor);
 }
+#testimonial .testimonial_slider .slider_nav-img .slider_nav_inner img{
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+   object-fit: cover;
+   background-color: #dddddd;
+   transition: .4s;
+}
+#testimonial .testimonial_slider .slider_nav-img.slick-center .slider_nav_inner img{
+   background-color: #ffca36;
+}
 #testimonial .testimonial_slider .slider_nav-img .slider_nav_inner{
    width: 80px;
    height: 80px;
