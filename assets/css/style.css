@@ -848,6 +848,37 @@ padding-bottom: 20px;
    font-size: 14px;
    color: var(--primaryColor);
 }
+#testimonial .testimonial_slider .slider_nav-img .slider_nav_inner{
+   width: 80px;
+   height: 80px;
+   border: 0px solid var(--primaryColor);
+   border-radius: 50%;
+   padding: 5px;
+   margin: 18px auto;
+   position: relative;
+   z-index: 1;
+}
+#testimonial .testimonial_slider .slider_nav-img.slick-center .slider_nav_inner{
+   border: 1px solid var(--primaryColor);
+   transition: .4s;
+}
+#testimonial .testimonial_slider .slider_nav-img.slick-center .slider_nav_inner::after{
+   content: '';
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   border: 1px solid var(--primaryColor);
+   border-radius: 5px 0 0 0;
+   border-bottom-color: transparent;
+   border-right-color: transparent;
+   left: 50%;
+   transform: translateX(-50%) rotate(45deg);
+   top: -8px;
+   background:rgba(10, 7, 6, 1) ;
+   z-index: -1;
+   transition: .4s;
+}
+
 
 #testimonial .testimonial_slider .slider_nav{
    margin: 30px 0px 50px 0px;
@@ -1224,7 +1255,6 @@ span{
 }
 
 /* Our Team = Blog */
-
 #blog .pfSlider_container .p-folio_img{
    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 95%);
    transform: translateY(12%);
@@ -1236,16 +1266,35 @@ span{
    transform: translateY(-12%);
    transition: .4s;
 }
+#blog .pfSlider_container .p-folio_item.slick-center .p-folio_title_section{
+   background: var(--primaryColor);
+}
 #blog .pfSlider_container .p-folio_title_section .title h2{
    color: var(--primaryWhite);
    font-size: 18px;
+   transition: .4s;
+}
+#blog .pfSlider_container .p-folio_item.slick-center .p-folio_title_section .title h2{
+   color: var(--secondaryColor);
 }
 #blog .pfSlider_container .p-folio_title_section .title p{
    color: var(--secondaryWhite);
    font-size: 14px;
+   transition: .4s;
+}
+#blog .pfSlider_container .p-folio_item.slick-center .p-folio_title_section .title p{
+   color: var(--textColor);
 }
 #blog .pfSlider_container .p-folio_title_section .social_icon{
+   padding-top: 0;
+   transform: scaleY(0);
+   transition: .5s;
+   transform-origin: top;
+}
+#blog .pfSlider_container .p-folio_item.slick-center .p-folio_title_section .social_icon{
    padding-top: 25px;
+   transform: scaleY(1);
+   transition: .5s;
 }
 #blog .pfSlider_container .p-folio_title_section .social_icon a i{
    font-size: 16px;
@@ -1261,12 +1310,15 @@ span{
 #blog .pfSlider_container .p-folio_title_section .social_icon a i:hover{
    background-color: #0077b5;
 }
-
 #blog .blog_slider_icon .blogteam_icon_prev{
-   left: 20px;
+   left: 25px;
+   top: 62%;
+   transform: translateY(-62%);
 }
 #blog .blog_slider_icon .blogteam_icon_next{
-   right: 20px;
+   right: 25px;
+   top: 62%;
+   transform: translateY(-62%);
 }
    /* About Us Section CSS End */
 /* *** About Us Page Section CSS End *** */

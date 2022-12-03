@@ -19,12 +19,6 @@ $(function () {
       autoplaySpeed: (1500),
   });
 
-   // Counter Up Activate
-   $('.counter').counterUp({
-      delay: 10,
-      time: 1000
-  });
-
    // Our Blog Slick Activation
    $('.blog_slider_container').slick({
       prevArrow: $('.blog_icon_prev'),
@@ -68,14 +62,19 @@ $(function () {
    });
 
    // Abot Page Our Team Slick Initialize
-   // $('.pfSlider_container').slick({
-   //    prevArrow: $('.blogteam_icon_prev'),
-   //    nextArrow: $('.blogteam_icon_next'),
-   //    slidesToShow: 3,
-   //    centerMode: true,
-   //    centerPadding: '0px',
-   // });
+   $('.pfSlider_container').slick({
+      prevArrow: $('.blogteam_icon_prev'),
+      nextArrow: $('.blogteam_icon_next'),
+      slidesToShow: 3,
+      centerMode: true,
+      centerPadding: '0px',
+   });
 
+    // Counter Up Activate
+   $('.counter').counterUp({
+      delay: 10,
+      time: 1000
+  });
 
    // Back To Top
    $(window).on('scroll', function () {
