@@ -1333,3 +1333,22 @@ span{
 }
    /* About Us Section CSS End */
 /* *** About Us Page Section CSS End *** */
+
+/* Portfolio page Section CSS Start */
+#port_folio .container .loadMore_button{
+   background-color: var(--primaryColor);
+   width: fit-content;
+   margin:auto ;
+   padding: 22px 20px;
+}
+#port_folio .container .loadMore_button a{
+   font-size: 16px;
+   font-weight: 500;
+   color: var(--secondaryColor);
+   text-transform: uppercase;
+}
+#port_folio .container .loadMore_button i{
+   font-size: 16px;
+   color: var(--secondaryColor);
+}
+/* Portfolio page Section CSS End */
