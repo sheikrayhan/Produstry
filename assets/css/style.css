@@ -1235,15 +1235,23 @@ footer .copyright .item span{
    font-size: 35px;
    text-transform: uppercase;
 }
-#aboutUs .heading p,
+#aboutUs .heading a,
 span{
    font-size: 18px;
    color: var(--primaryWhite);
    padding-top: 20px;
 }
+#aboutUs .heading a:hover{
+   color: var(--primaryColor);
+   transition: .4s;
+}
+#aboutUs .heading .a2a{
+   color: var(--primaryColor);
+}
 #aboutUs .heading span{
    color: var(--primaryColor);
 }
+
 #about .about_title p{
    text-align: justify;
    color: var(--textColor);
@@ -1446,11 +1454,10 @@ span{
    text-transform: uppercase;
    font-size: 16px;
    font-weight: 500;
-   /* letter-spacing: 25px; */
+   letter-spacing: 5px;
    color: var(--secondaryColor);
    padding: 10px 0px;
-   padding-right: 45%;
-   padding-left: 45%;
+   width: 100%;
    background-color: var(--primaryColor);
 }
 /* Newsletter Section CSS End */
