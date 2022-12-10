@@ -1362,6 +1362,15 @@ span{
 /* Portfolio page Section CSS End */
 
 
+/* ============================= */
+/* Blog Details Page CSS Start */
+#Blog_main_section .blog_view.blog_details h4{
+   font-size: 18px;
+}
+/* // Blog Details Page CSS End */
+
+
+/* ============================== */
 /* Contact Us Page Section CSS Start */
 /* Via Contact Section CSS Start */
 #via_contact .container .contact_details i{
@@ -1462,3 +1471,4 @@ span{
 }
 /* Newsletter Section CSS End */
 /* Contact Us Page Section CSS End */
+
