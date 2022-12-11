@@ -19,6 +19,8 @@
       <link rel="stylesheet" href="./assets/css/slick.min.css">
       <!-- Bootstrap Css Link -->
       <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+      <!-- Venobox Css Link -->
+      <link rel="stylesheet" href="./assets/css/venobox.min.css">
       <!-- Main Css Link -->
       <link rel="stylesheet" href="./assets/css/style.css">
       <!-- Responsive Css Link -->
@@ -114,19 +116,44 @@
         <!-- Blog Details TopBar Section Start -->
         <section id="blogTop_bar">
             <div class="container">
-                <div class="row">
-                     <div class="col-lg-8">
-                        <div>
-                            <a href="#"><i class="fa-solid fa-table-list"></i></a>
+                <div class="row topBar_info">
+                     <div class="col-lg-8 d-flex topBar-option">
+                        <div class="icon">
+                            <a href="#"><i class="fa-solid fa-grip"></i></a>
                             <a href="#"><i class="fa-solid fa-list"></i></a>
                         </div>
-                        <div>
 
+                        <div class="ms-auto option">
+                           <label for="">Sort by:</label>
+                           <select>
+                              <option selected>Name</option>
+                              <option value="1">zzz</option>
+                              <option value="2">ccc</option>
+                              <option value="3">vvv</option>
+                            </select>
+                            <label class="ms-3" for="">Showing:</label>
+                            <select>
+                               <option selected>12</option>
+                               <option value="1">11</option>
+                               <option value="2">10</option>
+                               <option value="3">09</option>
+                             </select>
                         </div>
                      </div>
 
-                     <div class="col-lg-4">
-
+                     <div class="col-lg-4 ps-lg-5 pagination_bar">
+                        <nav>
+                           <ul class="pagination pages">
+                             <li><a class="page-link pgs" href="#">Pages:</a></li>
+                             <li><a class="page-link" href="#">01</a></li>
+                             <li><a class="page-link" href="#">02</a></li>
+                             <li><a class="page-link" href="#">03</a></li>
+                             <!-- <li><a class="page-link" href="#">04</a></li> -->
+                             <li><a class="page-link offf" href="#">of</a></li>
+                             <li><a class="page-link" href="#">2017</a></li>
+                             <li><a class="page-link" href="#"><i class="fa-solid fa-caret-right"></i></a></li>
+                           </ul>
+                         </nav>
                      </div>
                 </div>
             </div>
@@ -142,24 +169,81 @@
                             <img src="assets/images/bloglistView_image01.png" alt="" class="img-fluid">
                             <div class="blog_details">
                                 <h4>Finding New Buildings in the Dust of the Old Never Seen Before</h4>
-                                <a href="#">
-                                    <i class="fa-solid fa-user"></i>
-                                    By: Admin
-                                </a>
-                                <a href="#">
-                                    <i class="fa-solid fa-thumbs-up"></i>
-                                    2.5 k Likes
-                                </a>
-                                <a href="#">
-                                    <i class="fa-solid fa-comments"></i>
-                                    1.5 k Comments 
-                                </a>
+                                <div class="d-flex">
+                                    <div>
+                                       <a href="#">
+                                          <i class="fa-solid fa-user"></i>
+                                          By: Admin
+                                       </a>
+                                    </div>
+                                    <div class="ms-auto">
+                                       <a class="px-3" href="#">
+                                          <i class="fa-solid fa-thumbs-up"></i>
+                                          2.5 k Likes
+                                       </a>
+                                       <a href="#">
+                                          <i class="fa-solid fa-comments"></i>
+                                          1.5 k Comments 
+                                       </a>
+                                    </div>
+                                </div>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsumas been the duy's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrabled it to make a type specimen book. It has survived not only fiventuries, but also the leap into electronicting, ning essentially unchanged. It was popularised in the 1960s with the release year.</p>
                                 <a class="read_more" href="#">READ MORE</a>
                             </div>
                         </div>
+                        <div class="blog_items">
+                           <img src="assets/images/bloglistView_image02.png" alt="" class="img-fluid">
+                           <div class="blog_details">
+                               <h4>Finding New Buildings in the Dust of the Old Never Seen Before</h4>
+                               <div class="d-flex">
+                                   <div>
+                                      <a href="#">
+                                         <i class="fa-solid fa-user"></i>
+                                         By: Admin
+                                      </a>
+                                   </div>
+                                   <div class="ms-auto">
+                                      <a class="px-3" href="#">
+                                         <i class="fa-solid fa-thumbs-up"></i>
+                                         2.5 k Likes
+                                      </a>
+                                      <a href="#">
+                                         <i class="fa-solid fa-comments"></i>
+                                         1.5 k Comments 
+                                      </a>
+                                   </div>
+                               </div>
+                               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsumas been the duy's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrabled it to make a type specimen book. It has survived not only fiventuries, but also the leap into electronicting, ning essentially unchanged. It was popularised in the 1960s with the release year.</p>
+                               <a class="read_more" href="#">READ MORE</a>
+                           </div>
+                       </div>
+                       <div class="blog_items">
+                        <img src="assets/images/bloglistView_image03.png" alt="" class="img-fluid">
+                        <div class="blog_details">
+                            <h4>Finding New Buildings in the Dust of the Old Never Seen Before</h4>
+                            <div class="d-flex">
+                                <div>
+                                   <a href="#">
+                                      <i class="fa-solid fa-user"></i>
+                                      By: Admin
+                                   </a>
+                                </div>
+                                <div class="ms-auto">
+                                   <a class="px-3" href="#">
+                                      <i class="fa-solid fa-thumbs-up"></i>
+                                      2.5 k Likes
+                                   </a>
+                                   <a href="#">
+                                      <i class="fa-solid fa-comments"></i>
+                                      1.5 k Comments 
+                                   </a>
+                                </div>
+                            </div>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsumas been the duy's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrabled it to make a type specimen book. It has survived not only fiventuries, but also the leap into electronicting, ning essentially unchanged. It was popularised in the 1960s with the release year.</p>
+                            <a class="read_more" href="#">READ MORE</a>
+                        </div>
                     </div>
-
+                    </div>
 
                     <div class="blog_keywords col-lg-4 px-0 ps-lg-5">
                         <div class="search_bar">
@@ -446,6 +530,10 @@
                             </div>
                         </div>
 
+                        <div class="video">
+                           <img src="./assets/images/blog_view_video-img.png" alt="" class="img-fluid">
+                           <a class="venobox" data-autoplay="true" data-vbtype="video" href="./assets/images/blog_video.mp4"><i class="fa-solid fa-play"></i></a>
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -588,6 +676,8 @@
         <!-- Counter Up Js link -->
         <script src="./assets/js/waypoints.min.js"></script>
         <script src="./assets/js/jquery.counterup.min.js"></script>
+        <!-- Venobox JS link -->
+        <script src="./assets/js/venobox.min.js"></script>
         <!-- Main Js Link -->
         <script src="./assets/js/script.js"></script>
 

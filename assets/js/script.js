@@ -100,3 +100,6 @@ $(function () {
    })
 
 })
+
+// Venobox Initial
+new VenoBox();

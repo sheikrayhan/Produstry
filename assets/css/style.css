@@ -1364,13 +1364,62 @@ span{
 
 /* ============================= */
 /* Blog Details Page CSS Start */
+/* Blog Top Bar Section CSS Start */
+#blogTop_bar{
+   margin-bottom: 50px;
+}
+#blogTop_bar .topBar_info .topBar-option .icon a i{
+   font-size: 20px;
+   color: var(--textColor);
+   border: 1px solid var(--secondaryColor);
+   height: 45px;
+   width: 45px;
+   line-height: 45px;
+   text-align: center;
+   margin-right: 10px;
+}
+#blogTop_bar .topBar_info .topBar-option .icon a:hover i{
+   background-color: var(--primaryColor);
+   border: 1px solid var(--secondaryWhite);
+   transition: .4s;
+} 
+#blogTop_bar .topBar_info .topBar-option .option label{
+   font-size: 14px;
+   color: var(--textColor);
+}
+#blogTop_bar .topBar_info .topBar-option .option select{
+   background: none;
+   border: none;
+   color: var(--textColor);
+   font-size: 14px;
+   border: 1px solid var(--secondaryColor);
+   padding: 13px 18px;
+}
+#blogTop_bar .topBar_info .pagination_bar .pages li a{
+   border: none;
+   color: var(--textColor);
+   font-size: 14px;
+   border: 1px solid var(--secondaryColor);
+   margin-right: 8px;
+   padding: 13px 13px;
+}
+#blogTop_bar .topBar_info .pagination_bar .pages .pgs, #blogTop_bar .topBar_info .pagination_bar .pages .offf{
+   border: none;
+   background: none;
+   padding-left: 0;
+   padding-right: 0;
+}
+/* Blog Top Bar Section CSS End */
 /* Blog Main section CSS Start */
+#Blog_main_section .container .blog_items{
+   margin-bottom: 50px;
+}
 #Blog_main_section .container .blog_items .blog_details{
    background-color: #f1f1f1;
    padding: 100px 50px 30px 50px;
    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
    margin: 0px 50px;
-   transform: translateY(-30%);
+   margin-top: -122px;
 }
 #Blog_main_section .container .blog_items .blog_details h4{
    font-size: 18px;
@@ -1426,8 +1475,6 @@ span{
 }
 #Blog_main_section .blog_keywords .tab-content .content_details .details{
    padding: 25px 0px;
-}
-#Blog_main_section .blog_keywords .tab-content .content_details .details{
    border-top: 1px solid #fff;
    border-bottom: 1px solid #fff;
 }
@@ -1522,6 +1569,28 @@ span{
    border: 1px solid var(--primaryColor);
    transition: .4s;
 }
+
+#Blog_main_section .blog_keywords .video{
+   position: relative;
+   margin-top: 50px;
+}
+#Blog_main_section .blog_keywords .video img{
+   width: 100%;
+}
+#Blog_main_section .blog_keywords .video a{
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   line-height: 50px;
+   text-align: center;
+   background-color: #ff3d3d;
+   color: #ffff;
+   font-size: 20px;
+   position: absolute;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   top: 50%;
+}
 /* Blog Main section CSS End */
 /* NExt Page Section CSS Start */
 #nxt .container a{
@@ -1531,7 +1600,6 @@ span{
    text-align: center;
    border: 1px solid #222222;
    padding: 15px;
-   margin-top: 50px;
 }
 #nxt .container a:hover{
    color: var(--primaryColor);
